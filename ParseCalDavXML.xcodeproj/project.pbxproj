@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05D7DC8F21CA536400B557BB /* Y4ObjectCalDav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DC8E21CA536400B557BB /* Y4ObjectCalDav.swift */; };
+		05E7909E21D3587D00A67596 /* todo_error_empty.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E7909D21D3575900A67596 /* todo_error_empty.txt */; };
+		05F20AE621AB9AB500313855 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F20AE521AB9AB500313855 /* main.swift */; };
+		05F20AEE21AB9BF000313855 /* OpenFileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F20AED21AB9BF000313855 /* OpenFileService.swift */; };
+		05F20AF021AB9BFB00313855 /* OpenFileServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F20AEF21AB9BFB00313855 /* OpenFileServiceImpl.swift */; };
+		05F20AF521ABA8F500313855 /* simple_caldav.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05F20AF321ABA16D00313855 /* simple_caldav.txt */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		05F20AF721ABAD0C00313855 /* ParserCalDavService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F20AF621ABAD0C00313855 /* ParserCalDavService.swift */; };
+		05F20AF921ABAD1F00313855 /* ParseCalDavServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F20AF821ABAD1F00313855 /* ParseCalDavServiceImpl.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05F20AE021AB9AB500313855 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				05E7909E21D3587D00A67596 /* todo_error_empty.txt in CopyFiles */,
+				05F20AF521ABA8F500313855 /* simple_caldav.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05D7DC8E21CA536400B557BB /* Y4ObjectCalDav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Y4ObjectCalDav.swift; sourceTree = "<group>"; };
+		05E7909D21D3575900A67596 /* todo_error_empty.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo_error_empty.txt; sourceTree = "<group>"; };
+		05F20AE221AB9AB500313855 /* ParseCalDavXML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ParseCalDavXML; sourceTree = BUILT_PRODUCTS_DIR; };
+		05F20AE521AB9AB500313855 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		05F20AED21AB9BF000313855 /* OpenFileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFileService.swift; sourceTree = "<group>"; };
+		05F20AEF21AB9BFB00313855 /* OpenFileServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFileServiceImpl.swift; sourceTree = "<group>"; };
+		05F20AF321ABA16D00313855 /* simple_caldav.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = simple_caldav.txt; sourceTree = "<group>"; };
+		05F20AF621ABAD0C00313855 /* ParserCalDavService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserCalDavService.swift; sourceTree = "<group>"; };
+		05F20AF821ABAD1F00313855 /* ParseCalDavServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCalDavServiceImpl.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05F20ADF21AB9AB500313855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05D7DC8D21CA521200B557BB /* Params */ = {
+			isa = PBXGroup;
+			children = (
+				05D7DC8E21CA536400B557BB /* Y4ObjectCalDav.swift */,
+			);
+			path = Params;
+			sourceTree = "<group>";
+		};
+		05F20AD921AB9AB500313855 = {
+			isa = PBXGroup;
+			children = (
+				05F20AE421AB9AB500313855 /* ParseCalDavXML */,
+				05F20AE321AB9AB500313855 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05F20AE321AB9AB500313855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05F20AE221AB9AB500313855 /* ParseCalDavXML */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05F20AE421AB9AB500313855 /* ParseCalDavXML */ = {
+			isa = PBXGroup;
+			children = (
+				05D7DC8D21CA521200B557BB /* Params */,
+				05F20AF121ABA0EB00313855 /* Data */,
+				05F20AEC21AB9BE400313855 /* Service */,
+				05F20AE521AB9AB500313855 /* main.swift */,
+			);
+			path = ParseCalDavXML;
+			sourceTree = "<group>";
+		};
+		05F20AEC21AB9BE400313855 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				05F20AED21AB9BF000313855 /* OpenFileService.swift */,
+				05F20AEF21AB9BFB00313855 /* OpenFileServiceImpl.swift */,
+				05F20AF621ABAD0C00313855 /* ParserCalDavService.swift */,
+				05F20AF821ABAD1F00313855 /* ParseCalDavServiceImpl.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		05F20AF121ABA0EB00313855 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				05F20AF221ABA11D00313855 /* TextFile */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		05F20AF221ABA11D00313855 /* TextFile */ = {
+			isa = PBXGroup;
+			children = (
+				05E7909D21D3575900A67596 /* todo_error_empty.txt */,
+				05F20AF321ABA16D00313855 /* simple_caldav.txt */,
+			);
+			path = TextFile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05F20AE121AB9AB500313855 /* ParseCalDavXML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05F20AE921AB9AB500313855 /* Build configuration list for PBXNativeTarget "ParseCalDavXML" */;
+			buildPhases = (
+				05F20ADE21AB9AB500313855 /* Sources */,
+				05F20ADF21AB9AB500313855 /* Frameworks */,
+				05F20AE021AB9AB500313855 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParseCalDavXML;
+			productName = ParseCalDavXML;
+			productReference = 05F20AE221AB9AB500313855 /* ParseCalDavXML */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05F20ADA21AB9AB500313855 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Thanh Le";
+				TargetAttributes = {
+					05F20AE121AB9AB500313855 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 05F20ADD21AB9AB500313855 /* Build configuration list for PBXProject "ParseCalDavXML" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05F20AD921AB9AB500313855;
+			productRefGroup = 05F20AE321AB9AB500313855 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05F20AE121AB9AB500313855 /* ParseCalDavXML */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05F20ADE21AB9AB500313855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F20AE621AB9AB500313855 /* main.swift in Sources */,
+				05F20AF921ABAD1F00313855 /* ParseCalDavServiceImpl.swift in Sources */,
+				05F20AF721ABAD0C00313855 /* ParserCalDavService.swift in Sources */,
+				05F20AEE21AB9BF000313855 /* OpenFileService.swift in Sources */,
+				05F20AF021AB9BFB00313855 /* OpenFileServiceImpl.swift in Sources */,
+				05D7DC8F21CA536400B557BB /* Y4ObjectCalDav.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		05F20AE721AB9AB500313855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05F20AE821AB9AB500313855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		05F20AEA21AB9AB500313855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		05F20AEB21AB9AB500313855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05F20ADD21AB9AB500313855 /* Build configuration list for PBXProject "ParseCalDavXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F20AE721AB9AB500313855 /* Debug */,
+				05F20AE821AB9AB500313855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05F20AE921AB9AB500313855 /* Build configuration list for PBXNativeTarget "ParseCalDavXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05F20AEA21AB9AB500313855 /* Debug */,
+				05F20AEB21AB9AB500313855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05F20ADA21AB9AB500313855 /* Project object */;
+}
