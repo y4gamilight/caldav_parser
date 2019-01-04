@@ -22,16 +22,33 @@ class ParserCalDavServiceImpl:ParserCalDavService {
     }
     
     func getKeyValues(in text:String) ->(keys:[String], mainKeys:[String], values:[String]){
+        let text = text.replacingOccurrences(of: "\r\n", with: "\n").replacingOccurrences(of: "\r", with: "\n")
         let newContent = "\n" + text
         let formatRegex = "(?<=\n)(.*)(?=:)";
         
         var keys :[String] = []
         var mainKeys : [String] = []
         var values :[String] = []
-        var components = getComponents(format: formatRegex, in: newContent)
-        components = components.filter{ $0.contains(" ") == false}
+        var results = getComponentsAndResult(format: formatRegex, in: newContent)
+        results = results.filter{ result in
+            let fullKey = result.1
+            if fullKey.contains(" ") == true {
+                //[TODO] Hard code for trick
+                if fullKey.contains("mailto") == false {
+                    return false
+                }
+                
+                if fullKey.contains("ORGANIZER") == false && fullKey.contains("ATTENDEE") == false {
+                    return false
+                }
+            }
+            return true
+            
+        }
+        let components = results.map {$0.1}
+        var ranges = results.map {$0.0.range}
         
-        components = components.map { component in
+         components.forEach { component in
             var result = component
             keys.append(result)
             if component.contains(";") {
@@ -39,51 +56,41 @@ class ParserCalDavServiceImpl:ParserCalDavService {
                     result = first
                 }
             }
-            return result
+            mainKeys.append(result)
         }
         var tempContent = newContent
-        for index in 0 ..< components.count {
+        for index in 0 ..< mainKeys.count {
             let startStr = keys[index]
-            let key = components[index]
-            mainKeys.append(key)
-            if index < components.count - 1 {
+            let startRange = ranges[index].location
+            let indexStart = newContent.index(newContent.startIndex, offsetBy: startRange)
+            if index < mainKeys.count - 1 {
                 let nextIndex = index + 1
-                let endStr:String = components[nextIndex]
+                let endStr:String = mainKeys[nextIndex]
                 //        print("startStr :\(startStr)")
                 //        print("endStr :\(endStr)")
                 let formatRegex = "(?<=\(startStr):)(?s)(.*)(?=\n\(endStr))";
                 //        print("formatRegex :\(formatRegex)")
                 var value = ""
+                let endRange = ranges[nextIndex].location + ranges[nextIndex].length
+                let indexEnd = newContent.index(newContent.startIndex, offsetBy: endRange)
+                tempContent = String(newContent[indexStart..<indexEnd])
                 let subComps = getComponents(format: formatRegex, in: tempContent)
                 if let result = subComps.first {
                     value = result
                 }
                 values.append(value)
             } else {
-                let endStr = "\nENDFLO_\(Date().timeIntervalSince1970)"
-                let endContent = "\(tempContent)\(endStr)"
-                var value = ""
-                let formatRegex = "(?<=\(startStr):)(?s)(.*)(?=\n\(endStr))";
-                let subComps = getComponents(format: formatRegex, in: endContent)
-                if let result = subComps.first {
-                    value = result
-                }
+                tempContent = String(newContent[indexStart..<newContent.endIndex])
+                var value = tempContent.replacingOccurrences(of: "\(startStr):", with: "")
+                value = value.trimmingCharacters(in: .whitespacesAndNewlines)
                 values.append(value)
             }
             
-            let prefixStr = "STARTFLO_\(Date().timeIntervalSince1970)"
-            let keyIndex = keys[index]
-            let valueIndex = values[index]
-            let line =  "\(prefixStr)\n\(keyIndex):\(valueIndex)"
-            tempContent = "\(prefixStr)\(tempContent)"
-            tempContent = tempContent.replacingOccurrences(of: line, with: "")
         }
         return (keys:keys, mainKeys: mainKeys, values:values)
         
     }
-    
-    
-    
+     
     private func getObjectCalDav(from tupples:(keys:[String], mainKeys:[String], values:[String])) -> [Y4ObjectCalDav]{
         let lengthArray = tupples.values.count
         var objects:[Y4ObjectCalDav] = []
@@ -100,7 +107,7 @@ class ParserCalDavServiceImpl:ParserCalDavService {
                 return objects
             }
             
-            let value = values[beginIndex]
+            let value = values[beginIndex].trimmingCharacters(in: .whitespacesAndNewlines)
             var endIndex = -1
             for i in (beginIndex + 1) ..< mainKeys.count {
                 let endValue = values[i]
@@ -131,13 +138,33 @@ class ParserCalDavServiceImpl:ParserCalDavService {
         return objects
     }
     
-    private func getComponents(format:String, in text:String) -> [String]{
+    private func getComponentsAndResult(format:String, in text:String) -> ( [(NSTextCheckingResult,String)]) {
         
         do {
             let regex = try NSRegularExpression(pattern: format)
-            let results = regex.matches(in: text,
+            let results = regex.matches(in: text, options: .withoutAnchoringBounds,
                                         range: NSRange(text.startIndex..., in: text))
-            let valided = results.map {[weak self] result in
+            let valided = results.compactMap { (result) -> (_ :NSTextCheckingResult,_: String)? in
+                guard let range = Range.init(result.range, in: text)else{
+                    return nil
+                }
+                let value = String(text[range])
+                return (result,value)
+            }
+            return valided
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
+        }
+    }
+    
+    private func getComponents(format:String, in text:String) -> [String] {
+        
+        do {
+            let regex = try NSRegularExpression(pattern: format)
+            let results = regex.matches(in: text, options: .withoutAnchoringBounds,
+                                        range: NSRange(text.startIndex..., in: text))
+            let valided = results.map { result in
                 return String(text[Range(result.range, in: text)!])
             }
             return valided

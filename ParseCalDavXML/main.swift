@@ -8,7 +8,7 @@
 
 import Foundation
 
-let name = "todo_error_empty.txt"
+let name = "aol_location.txt"
 
 let openService:OpenFileService = OpenFileServiceImpl()
 let parserService: ParserCalDavService = ParserCalDavServiceImpl()

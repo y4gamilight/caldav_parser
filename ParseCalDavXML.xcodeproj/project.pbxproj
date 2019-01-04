@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05ACCBF521DF570400DC73A1 /* aol_location.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05ACCBF421DF570000DC73A1 /* aol_location.txt */; };
 		05D7DC8F21CA536400B557BB /* Y4ObjectCalDav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DC8E21CA536400B557BB /* Y4ObjectCalDav.swift */; };
 		05E7909E21D3587D00A67596 /* todo_error_empty.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05E7909D21D3575900A67596 /* todo_error_empty.txt */; };
 		05F20AE621AB9AB500313855 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F20AE521AB9AB500313855 /* main.swift */; };
@@ -24,6 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				05ACCBF521DF570400DC73A1 /* aol_location.txt in CopyFiles */,
 				05E7909E21D3587D00A67596 /* todo_error_empty.txt in CopyFiles */,
 				05F20AF521ABA8F500313855 /* simple_caldav.txt in CopyFiles */,
 			);
@@ -32,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05ACCBF421DF570000DC73A1 /* aol_location.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aol_location.txt; sourceTree = "<group>"; };
 		05D7DC8E21CA536400B557BB /* Y4ObjectCalDav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Y4ObjectCalDav.swift; sourceTree = "<group>"; };
 		05E7909D21D3575900A67596 /* todo_error_empty.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo_error_empty.txt; sourceTree = "<group>"; };
 		05F20AE221AB9AB500313855 /* ParseCalDavXML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ParseCalDavXML; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +114,7 @@
 		05F20AF221ABA11D00313855 /* TextFile */ = {
 			isa = PBXGroup;
 			children = (
+				05ACCBF421DF570000DC73A1 /* aol_location.txt */,
 				05E7909D21D3575900A67596 /* todo_error_empty.txt */,
 				05F20AF321ABA16D00313855 /* simple_caldav.txt */,
 			);
