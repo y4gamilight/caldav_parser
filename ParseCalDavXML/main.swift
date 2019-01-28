@@ -8,7 +8,7 @@
 
 import Foundation
 
-let name = "aol_location.txt"
+let name = "reminder_event.txt"
 
 let openService:OpenFileService = OpenFileServiceImpl()
 let parserService: ParserCalDavService = ParserCalDavServiceImpl()
