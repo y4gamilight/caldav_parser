@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0515468022000A7F009CC617 /* todo_error_empty2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0515467F22000A5F009CC617 /* todo_error_empty2.txt */; };
 		05470FC421FF270700CA8F33 /* reminder_event.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05470FC121FF263000CA8F33 /* reminder_event.txt */; };
 		05ACCBF521DF570400DC73A1 /* aol_location.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 05ACCBF421DF570000DC73A1 /* aol_location.txt */; };
 		05D7DC8F21CA536400B557BB /* Y4ObjectCalDav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DC8E21CA536400B557BB /* Y4ObjectCalDav.swift */; };
@@ -26,6 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				0515468022000A7F009CC617 /* todo_error_empty2.txt in CopyFiles */,
 				05470FC421FF270700CA8F33 /* reminder_event.txt in CopyFiles */,
 				05ACCBF521DF570400DC73A1 /* aol_location.txt in CopyFiles */,
 				05E7909E21D3587D00A67596 /* todo_error_empty.txt in CopyFiles */,
@@ -36,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0515467F22000A5F009CC617 /* todo_error_empty2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo_error_empty2.txt; sourceTree = "<group>"; };
 		05470FC121FF263000CA8F33 /* reminder_event.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = reminder_event.txt; sourceTree = "<group>"; };
 		05ACCBF421DF570000DC73A1 /* aol_location.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aol_location.txt; sourceTree = "<group>"; };
 		05D7DC8E21CA536400B557BB /* Y4ObjectCalDav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Y4ObjectCalDav.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		05F20AF221ABA11D00313855 /* TextFile */ = {
 			isa = PBXGroup;
 			children = (
+				0515467F22000A5F009CC617 /* todo_error_empty2.txt */,
 				05470FC121FF263000CA8F33 /* reminder_event.txt */,
 				05ACCBF421DF570000DC73A1 /* aol_location.txt */,
 				05E7909D21D3575900A67596 /* todo_error_empty.txt */,

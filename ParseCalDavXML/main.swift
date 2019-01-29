@@ -8,7 +8,7 @@
 
 import Foundation
 
-let name = "reminder_event.txt"
+let name = "todo_error_empty2.txt"
 
 let openService:OpenFileService = OpenFileServiceImpl()
 let parserService: ParserCalDavService = ParserCalDavServiceImpl()
